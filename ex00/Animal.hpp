@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 21:05:10 by simao             #+#    #+#             */
-/*   Updated: 2023/07/17 22:48:17 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/18 13:54:23 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 /* LIbraries */
 #include <iostream>
 #include <string.h>
-#include "Dog.hpp"
-#include "Cat.hpp"
 
 /* Classes */
 class Animal
@@ -27,12 +25,13 @@ class Animal
     public:
         /* Constructors */
         Animal(void);
-        Animal(const Animal& other);
+        Animal(Animal const &other);
         ~Animal(void);
         /* Operator Overloading */
-        Animal& operator=(const Animal& other);
+        Animal& operator=(Animal const& other);
         /* Member Functions */
         virtual void    makeSound(void);
+        std::string		getType(void) const;
 };
 
 #endif

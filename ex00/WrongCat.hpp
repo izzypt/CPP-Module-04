@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/17 21:50:01 by simao             #+#    #+#             */
-/*   Updated: 2023/07/18 13:53:27 by simao            ###   ########.fr       */
+/*   Created: 2023/07/18 12:34:41 by simao             #+#    #+#             */
+/*   Updated: 2023/07/18 12:42:07 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef WRONGCAT_H
+# define WRONGCAT_H
 
 /* Libraries */
 
-#include "Animal.hpp"
+#include <iostream>
+#include <string>
+#include "WrongAnimal.hpp"
 
 /* Classes */
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
     public:
-        Dog(void);
-        Dog(Dog const &other);
-        ~Dog(void);
-        Dog& operator=(const Dog& other);
-        void makeSound(void) override;
+        WrongCat(void);
+        WrongCat(WrongCat const& cat);
+        ~WrongCat(void);
+        void operator=(WrongCat const& cat);
+        void makeSound(void);
         std::string		getType(void) const;
 };
 

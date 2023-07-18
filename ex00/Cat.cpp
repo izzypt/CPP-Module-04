@@ -6,11 +6,12 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 22:53:30 by simao             #+#    #+#             */
-/*   Updated: 2023/07/17 22:56:54 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/18 13:56:50 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
 
 Cat::Cat()
 {
@@ -38,4 +39,9 @@ Cat& Cat::operator=(Cat const& other)
 void	Cat::makeSound(void)
 {
 	std::cout << "Miauuu!!" << std::endl;
+}
+
+std::string	Cat::getType(void) const 
+{
+	return this->type;
 }

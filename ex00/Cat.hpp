@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 21:50:04 by simao             #+#    #+#             */
-/*   Updated: 2023/07/17 22:56:33 by simao            ###   ########.fr       */
+/*   Updated: 2023/07/18 12:49:18 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Cat : public Animal
         Cat& operator=(const Cat &other);
         ~Cat(void);
         void makeSound(void) override;
+        std::string		getType(void) const;
 };
 
 #endif
